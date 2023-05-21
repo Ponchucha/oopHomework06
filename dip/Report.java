@@ -1,4 +1,4 @@
-package ru.geekbrains.lesson6.dip;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,9 +14,9 @@ public class Report {
         items.add(new ReportItem("Second", (float)6));
     }
 
-    public void output(){
-        PrintReport printReport = new PrintReport();
-        printReport.output(items);
+    public void output(Printers printer){
+        
+        printer.output(items);
     }
 
 }
