@@ -1,4 +1,4 @@
-package ru.geekbrains.lesson6.dip;
+
 
 public class Program {
 
@@ -6,7 +6,11 @@ public class Program {
     public static void main(String[] args) {
         Report report = new Report();
         report.calculate();
-        report.output();
+        report.output(new PrintReport());
+        System.out.println();
+        report.output(new PrintReport2("My cool Epson printer"));
+        System.out.println();
+        report.output(new PrintReport3("report.txt"));
     }
 
 }
